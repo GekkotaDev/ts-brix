@@ -1,0 +1,53 @@
+{
+  "name": "ts-brix",
+  "version": "0.0.0",
+  "description": "Minimal Typescript runtime utility library.",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./*": "./*"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./*"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "build:fix": "esno scripts/postbuild.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "result",
+    "pipe",
+    "enum",
+    "typescript"
+  ],
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@types/node": "^22.5.4",
+    "chalk": "^5.3.0",
+    "esno": "^4.7.0",
+    "fast-glob": "^3.3.2",
+    "oxlint": "^0.9.3",
+    "prettier": "^3.3.3",
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "ts-pattern": "^5.3.1",
+    "ts-results": "^3.3.0",
+    "unionize": "^3.1.0"
+  }
+}
